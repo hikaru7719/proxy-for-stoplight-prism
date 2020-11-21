@@ -1,24 +1,30 @@
 {
-    "name": "Proxy For Stoplight Prism Mock Server",
-    "version": "1.0",
-    "description": "inject prefer header to get expect example from mock server",
-    "manifest_version": 2,
-    "permissions": ["declarativeContent"],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
-    "page_action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "icon/icon16.png",
-            "48": "icon/icon48.png",
-            "128": "icon/icon128.png"
-        }
-    },
-    "icons": {
-        "16": "icon/icon16.png",
-        "48": "icon/icon48.png",
-        "128": "icon/icon128.png"
+  "name": "Proxy For Stoplight Prism Mock Server",
+  "version": "1.0",
+  "description": "inject prefer header to get expect example from mock server",
+  "manifest_version": 2,
+  "permissions": [
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking",
+    "http://localhost:*/",
+    "https://localhost:*/"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon/icon16.png",
+      "48": "icon/icon48.png",
+      "128": "icon/icon128.png"
     }
+  },
+  "icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
   }
+}
